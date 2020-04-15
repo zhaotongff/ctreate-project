@@ -14,8 +14,18 @@ module.exports = {
     ecmaVersion: 2020
   },
   rules: {
-    "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
-    "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off"
+    "no-console": process.env.NODE_ENV === "production" ? "error" : "off",
+    "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off",
+    "no-multiple-empty-lines":
+      process.env.NODE_ENV === "production" ? "error" : "off",
+    "no-trailing-spaces":
+      process.env.NODE_ENV === "production" ? "error" : "off",
+    "@typescript-eslint/no-unused-vars": 2,
+    "no-template-curly-in-string": "off",
+    "space-before-function-paren": "off"
+  },
+  parserOptions: {
+    parser: "@typescript-eslint/parser"
   },
   overrides: [
     {

@@ -42,5 +42,10 @@
     "prettier": "^1.19.1",
     "typescript": "~3.8.3",
     "vue-template-compiler": "^2.6.11"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "semi": false,
+    "singleQuote": true
   }
 }
